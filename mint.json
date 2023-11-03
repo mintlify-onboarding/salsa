@@ -1,0 +1,229 @@
+{
+    "name": "Salsa",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+      "primary": "#8571E8",
+      "light": "#c0b3ff",
+      "dark": "#8571E8",
+      "background": {
+        "dark": "#031E39"
+       }
+    },
+    "modeToggle": {
+        "default": "dark"
+    },
+    "topbarCtaButton": {
+      "name": "Get a demo",
+      "url": "https://www.salsa.dev/product"
+    },
+    "api": {
+        "auth": {
+          "method": "bearer"
+        }
+    },
+    "anchors": [
+      {
+        "name": "Product Updates",
+        "icon": "rotate-right",
+        "url": "https://www.salsa.dev/product-updates"
+      },
+      {
+        "name": "Blog",
+        "icon": "newspaper",
+        "url": "https://www.salsa.dev/product-updates"
+      }
+    ],
+    "tabs": [
+        {
+            "name": "API Reference",
+            "url": "api-reference"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "General",
+            "pages": [
+              "general/introduction",
+              "general/authorization",
+              "general/building-with-salsa"
+            ]
+        },
+        {
+            "group": "Authentication",
+            "pages": [
+              "api-reference/authentication/create-user-api-token"
+            ]
+        },
+          {
+            "group": "Documents",
+            "pages": [
+              "api-reference/documents/retrieve-document",
+              "api-reference/documents/generate-document-link"
+            ]
+          },
+          {
+            "group": "Employers",
+            "pages": [
+              "api-reference/employers/create-employer",
+              "api-reference/employers/retrieve-employers",
+              "api-reference/employers/retrieve-employer",
+              "api-reference/employers/update-employer",
+              "api-reference/employers/delete-employer",
+              "api-reference/employers/accept-or-reject-employer-terms-of-service"
+            ]
+          },
+          {
+            "group": "Employer Capabilities",
+            "pages": [
+              "api-reference/employer-capabilities/retrieve-employer-capabilities"
+            ]
+          },
+          {
+            "group": "Mock Onboarding",
+            "pages": [
+              "api-reference/mock-onboarding/mock-onboard-employer",
+              "api-reference/mock-onboarding/mock-onboard-worker"
+            ]
+          },
+          {
+            "group": "Employer Onboarding",
+            "pages": [
+              "api-reference/employer-onboarding/create-hostedemployeronboarding",
+              "api-reference/employer-onboarding/retrieve-hostedemployeronboarding"
+            ]
+          },
+          {
+            "group": "PayrollRuns",
+            "pages": [
+              "api-reference/payrollruns/retrieve-all-payrollruns",
+              "api-reference/payrollruns/create-payrollrun",
+              "api-reference/payrollruns/preview-payrollrun",
+              "api-reference/payrollruns/retrieve-payrollrun",
+              "api-reference/payrollruns/delete-payrollrun",
+              "api-reference/payrollruns/confirm-payrollrun",
+              "api-reference/payrollruns/retrieve-payrollrun-state",
+              "api-reference/payrollruns/retrieve-all-workerpaymentrecords",
+              "api-reference/payrollruns/modify-a-workerpayment"
+            ]
+          },
+          {
+            "group": "PayrollRunReports",
+            "pages": [
+              "api-reference/payrollrunreports/cash-requirements-report",
+              "api-reference/payrollrunreports/payroll-journal-report"
+            ]
+          },
+          {
+            "group": "Employer Work Location",
+            "pages": [
+              "api-reference/employer-work-location/retrieve-work-locations",
+              "api-reference/employer-work-location/retrieve-a-work-location"
+            ]
+          },
+          {
+            "group": "WorkerPayGroups",
+            "pages": [
+              "api-reference/workerpaygroups/retrieve-all-workerpaygroups",
+              "api-reference/workerpaygroups/retrieve-workerpaygroup"
+            ]
+          },
+          {
+            "group": "WorkerPayments",
+            "pages": [
+              "api-reference/workerpayments/retrieve-workerpayment",
+              "api-reference/workerpayments/delete-workerpayment",
+              "api-reference/workerpayments/advance-payment",
+              "api-reference/workerpayments/get-compensations",
+              "api-reference/workerpayments/creates-compensation",
+              "api-reference/workerpayments/confirm-workerpayment",
+              "api-reference/workerpayments/get-deductions",
+              "api-reference/workerpayments/creates-deduction",
+              "api-reference/workerpayments/get-workerpaymentrecord",
+              "api-reference/workerpayments/retrieve-workerpayments",
+              "api-reference/workerpayments/create-workerpayment"
+            ]
+          },
+          {
+            "group": "Workers",
+            "pages": [
+              "api-reference/workers/retrieve-workers",
+              "api-reference/workers/create-worker",
+              "api-reference/workers/retrieve-worker",
+              "api-reference/workers/update-worker"
+            ]
+          },
+          {
+            "group": "Worker Capabilities",
+            "pages": [
+              "api-reference/worker-capabilities/retrieve-worker-capabilities"
+            ]
+          },
+          {
+            "group": "Worker Contract",
+            "pages": [
+              "api-reference/worker-contract/create-workercontract",
+              "api-reference/worker-contract/update-workercontract"
+            ]
+          },
+          {
+            "group": "Worker Onboarding",
+            "pages": [
+              "api-reference/worker-onboarding/create-hostedworkeronboarding",
+              "api-reference/worker-onboarding/retrieve-hostedworkeronboarding"
+            ]
+          },
+          {
+            "group": "worker-rest-controller-v-1",
+            "pages": [
+              "api-reference/worker-rest-controller-v-1/get-apirestv1employers-workers-termination"
+            ]
+          },
+          {
+            "group": "Worker Work Location",
+            "pages": [
+              "api-reference/worker-work-location/retrieve-work-locations",
+              "api-reference/worker-work-location/retrieve-a-work-location"
+            ]
+          },
+          {
+            "group": "WorkerPaymentRecord",
+            "pages": [
+              "api-reference/workerpaymentrecord/retrieve-all-workerpaymentrecords"
+            ]
+          },
+          {
+            "group": "OrganizationCompensationPolicy",
+            "pages": [
+              "api-reference/organizationcompensationpolicy/retrieve-all-organizationcompensationpolicies",
+              "api-reference/organizationcompensationpolicy/retrieve-organizationcompensationpolicies"
+            ]
+          },
+          {
+            "group": "Paystream",
+            "pages": [
+              "api-reference/paystream/send-paystream-item",
+              "api-reference/paystream/import-compensations",
+              "api-reference/paystream/import-employers",
+              "api-reference/paystream/import-workers"
+            ]
+          },
+          {
+            "group": "WebhookEndpoint",
+            "pages": [
+              "api-reference/webhookendpoint/retrieve-all-webhookendpoints",
+              "api-reference/webhookendpoint/create-webhookendpoint",
+              "api-reference/webhookendpoint/retrieve-webhookendpoint",
+              "api-reference/webhookendpoint/update-webhookendpoint"
+            ]
+          }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/salsa_dev",
+          "linkedin": "https://www.linkedin.com/company/salsa-dev/"
+      }
+  }

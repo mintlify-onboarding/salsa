@@ -1,0 +1,47 @@
+---
+title: "Authorization"
+description: "Securely access all data and capabilities provided by Salsa."
+---
+
+Salsa uses OAuth 2.0 Bearer Tokens to authorize requests. A valid Bearer Token is must be specified via the Authorization header on all requests made against Salsa APIs, e.g. -H "Authorization: Bearer YOUR_BEARER_TOKEN.
+
+We support two different token types: API Token and User Token.
+
+## API Token
+
+When building payroll with Salsa, you receive an API Token that provides access to Salsa’s APIs - also commonly referred to as your “API key”. This Token grants many privileges and is a secret value, so be sure to keep it secure and never used/shared publicly.
+
+As part of your onboarding as a partner, Salsa will securely send you your API Token for each environment that you have been onboarded onto.
+
+<Tip>
+    **Retrieving your API token**
+
+
+    If you need to have your API Token resent to you for any reason, contact us.
+</Tip>
+User Token
+A User Token is a token that you can create to provide temporary access to a specific set of permissions for a given user. Since Salsa does not have any knowledge of your users, you are responsible for deciding on the authorization to grant to any of your authenticated users. This is done by specifying an access role when creating the token. The access roles available for use are:
+
+- `EMPLOYER_ADMIN` - Granted administrative permissions for a group employers, allowing the user to view and modify all data associated with them (workers, payroll runs, etc)
+- `WORKER_USER` - Granted the ability to view data associated with the specified worker (personal information, payment records, etc)
+
+Creating a User Token is done by sending a request to Salsa’s Credentials API. Here is an example of creating a User Token with the EMPLOYER_ADMIN access role:
+
+```bash cURL
+curl --request POST \
+     --url https://api.sandbox.salsa.dev/api/rest/v1/auth/token \
+     --header 'accept: application/json' \
+     --header 'authorization: Bearer ${YOUR_SANDBOX_API_TOKEN}' \
+     --header 'content-type: application/json' \
+     --data '{
+          "type": "CreateEmployerUserTokenInput",
+          "role": "EMPLOYER_ADMIN",
+          "employerIds": [
+            "${SALSA_EMPLOYER_ID_1}",
+            "${SALSA_EMPLOYER_ID_2}"
+          ]
+        }'
+```
+The user token generated will be valid for 1 hour, after which, a new token will need to be issued. This expiration time is configurable.
+
+See Create User API token API reference for more details.
